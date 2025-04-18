@@ -2,6 +2,9 @@
 
 A Retrieval-Augmented Generation (RAG) demo application built with LangChain and Streamlit. This application allows you to upload various types of documents and chat with them using Google's Gemini AI.
 
+## Architecutre
+![Architecture](./artifacts/rag-architecture.png)
+
 ## Features
 
 - Support for multiple file types:

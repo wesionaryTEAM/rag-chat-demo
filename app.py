@@ -96,7 +96,6 @@ def get_conversation_chain(vectorstore):
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.0-flash",  # Model to use for generating responses
         temperature=0,  # Controls randomness in responses (0 = deterministic)
-        convert_system_message_to_human=True  # Convert system messages to human-readable format
     )
     
     # Initialize memory to store chat history
