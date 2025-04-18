@@ -1,0 +1,7 @@
+[project]
+name = "rag-demo"
+version = "0.1.0"
+description = "Demo application for RAG application"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
