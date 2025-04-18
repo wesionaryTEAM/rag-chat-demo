@@ -51,3 +51,6 @@ A Retrieval-Augmented Generation (RAG) demo application built with LangChain and
 - Python 3.8+
 - Google API key
 - Required Python packages (see requirements.txt)
+
+## Snapshots
+![Chat Interface](./artifacts/snapshot-1.png)
