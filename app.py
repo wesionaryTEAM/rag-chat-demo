@@ -10,6 +10,7 @@ from langchain_community.document_loaders import (
     UnstructuredWordDocumentLoader,
     UnstructuredExcelLoader,
     UnstructuredPowerPointLoader,
+    CSVLoader,
 )
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
@@ -41,6 +42,7 @@ def get_file_loader(file_path, file_type):
         "doc": UnstructuredWordDocumentLoader,
         "xlsx": UnstructuredExcelLoader,
         "pptx": UnstructuredPowerPointLoader,
+        "csv": CSVLoader,
     }
     return loaders.get(file_type.lower(), TextLoader)(file_path)
 
@@ -78,7 +80,17 @@ def main():
         st.subheader("Upload Documents")
         uploaded_files = st.file_uploader(
             "Upload your documents",
-            type=["pdf", "docx", "txt", "md", "html", "doc", "xlsx", "pptx"],
+            type=[
+                "pdf",
+                "docx",
+                "txt",
+                "md",
+                "html",
+                "doc",
+                "xlsx",
+                "pptx",
+                "csv",
+            ],
             accept_multiple_files=True,
         )
 
